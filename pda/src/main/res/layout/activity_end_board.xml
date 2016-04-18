@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_board"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实际打包数量: "
+                style="@style/BoardTheme.BigTextView"/>
+            <TextView
+                android:id="@+id/actual_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/BoardTheme.BigTextView"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计划数量: "
+                style="@style/BoardTheme.BigTextView"/>
+            <TextView
+                android:id="@+id/plan_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/BoardTheme.BigTextView"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="速度: "
+                style="@style/BoardTheme.BigTextView"/>
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/BoardTheme.BigTextView"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="差值: "
+                style="@style/BoardTheme.BigTextView"/>
+            <TextView
+                android:id="@+id/difference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/BoardTheme.BigTextView"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不良品数: "
+                style="@style/BoardTheme.BigTextView"/>
+            <TextView
+                android:id="@+id/bad_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/BoardTheme.BigTextView"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+include ':pda'
+include ':board'
+include ':core'
+include ':DaoGenerator'

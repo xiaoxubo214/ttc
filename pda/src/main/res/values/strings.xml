@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Ttc</string>
+    <string name="company_short_name">明匠智能</string>
+    <string name="company_all_name">上海明匠智能系统有限公司</string>
+    <string name="version">Version: </string>
+    <string name="can_not_find_version_name">未知版本</string>
+    <string name="action_settings">设置</string>
+    <string name="item_1">扫码确认</string>
+    <string name="item_2">到货查询</string>
+    <string name="item_3">生产领料</string>
+    <string name="item_4">物料上线</string>
+    <string name="item_5">物料下线</string>
+    <string name="item_6">生产退库</string>
+    <string name="item_7">生产入库</string>
+    <string name="item_8">销售出库</string>
+    <string name="item_9">生产上线</string>
+    <string name="item_10">生产消耗</string>
+    <string name="item_11">生产完成</string>
+    <string name="item_12">增加物</string>
+    <string name="item_13">增加物料</string>
+    <string name="item_14">增加物料4</string>
+    <string name="title_activity_setting">设置</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_fragment_scan">扫码</string>
+    <string name="arrival_detail">到货明细</string>
+    <string name="not_arrival_detail">未到货明细</string>
+    <!-- Strings related to login -->
+    <string name="prompt_username">用户名</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_invalid_email">用户名错误</string>
+    <string name="error_invalid_password">密码错误</string>
+    <string name="error_incorrect_password">密码错误</string>
+    <string name="error_field_required">字段不能为空</string>
+    <string name="batch_number">订单批次</string>
+    <string name="sure">确认</string>
+    <string name="cancel">取消</string>
+    <string name="no_check">未入库</string>
+    <string name="checked">已入库</string>
+
+    <string name="order_number">生产订单编号</string>
+    <string name="production_number">生产的产品编号</string>
+    <string name="material_number">消耗的原材料编号</string>
+    <string name="product_batch">空壳上的批次号</string>
+    <string name="sale_check_out_number">销售出库单号</string>
+    <string name="scan_input">扫码输入</string>
+    <string name="scan_success">扫码成功,上传信息?</string>
+    <string name="barcode_info">条码信息: </string>
+
+    <string name="tip">提示</string>
+    <string name="get_success">获取成功！</string>
+    <string name="get_fail">获取失败！</string>
+    <string name="code">编号</string>
+    <string name="name">名称</string>
+    <string name="batch">批次</string>
+    <string name="status">状态</string>
+    <string name="number">数量</string>
+    <string name="default_number">默认为整箱</string>
+    <string name="barcode_is_empty">条码为空！！</string>
+    <string name="refresh">刷新</string>
+    <string name="container_code">箱号</string>
+    <string name="please_input_container_code">请输入箱号</string>
+    <string name="end_board_title">打包看板</string>
+    <string name="head_board_title">上线看板</string>
+    <string name="warehouse_board_title">仓库看板</string>
+    <string name="office_board_title">办公室看板</string>
+    <string name="current_material">当前物料</string>
+    <string name="current_product">产品</string>
+
+</resources>

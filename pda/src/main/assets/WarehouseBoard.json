@@ -1,0 +1,58 @@
+[
+  {
+    "customer": "123213",
+    "wl02": 0,
+    "batch": "121222",
+    "online_number": 0,
+    "wl04": 0,
+    "state": "快",
+    "wl01": 0,
+    "wl03": 0,
+    "time": "10:00-11:00",
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)",
+    "plan_number": 100,
+    "line": "01"
+  },
+  {
+    "customer": "123123123",
+    "wl02": 0,
+    "batch": "121222",
+    "online_number": 0,
+    "wl04": 0,
+    "state": "快",
+    "wl01": 0,
+    "wl03": 0,
+    "time": "11:00-13:00",
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)                                     ",
+    "plan_number": "200",
+    "line": "01"
+  },
+  {
+    "customer": "123",
+    "wl02": 0,
+    "batch": "1112",
+    "online_number": 0,
+    "wl04": 0,
+    "state": "慢",
+    "wl01": 0,
+    "wl03": 0,
+    "time": "12:00-13:00",
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)                                     ",
+    "plan_number": "200",
+    "line": "00"
+  },
+  {
+    "customer": "22爱疯",
+    "wl02": 0,
+    "batch": "12313",
+    "online_number": 201,
+    "wl04": 0,
+    "state": "慢",
+    "wl01": 1,
+    "wl03": 0,
+    "time": "11:00-12:00",
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用) ",
+    "plan_number": "300",
+    "line": "00"
+  }
+]

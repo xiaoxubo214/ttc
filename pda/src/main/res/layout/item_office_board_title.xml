@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	android:orientation="horizontal"
+	android:gravity="center"
+	android:padding="10dp"
+	android:layout_gravity="center">
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		style="@style/BoardTheme.MiddleTextView"
+		android:text="线号"
+		/>
+
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		style="@style/BoardTheme.MiddleTextView"
+		android:text="客户"
+		/>
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		style="@style/BoardTheme.MiddleTextView"
+		android:text="机型"
+		/>
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		style="@style/BoardTheme.MiddleTextView"
+		android:text="进度"
+		/>
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		style="@style/BoardTheme.MiddleTextView"
+		android:text="打包数量"
+		/>
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		style="@style/BoardTheme.MiddleTextView"
+		android:text="计划数量"
+		/>
+
+	<TextView
+		android:id="@+id/online_number"
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		style="@style/BoardTheme.MiddleTextView"
+		android:text="上线数量"
+		/>
+</LinearLayout>

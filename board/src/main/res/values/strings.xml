@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Board</string>
+    <string name="work_on">进行中</string>
+    <string name="finished">完成</string>
+</resources>
