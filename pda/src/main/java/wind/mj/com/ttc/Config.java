@@ -12,6 +12,8 @@ public class Config {
 
     public final static String DATABASE = "TTC";
 
+    public final static String LINE_NUMBER = "00";
+
     public final static String STR_USERNAME = "username";
 
     public final static String DEFAULT_USERNAME = "admin";

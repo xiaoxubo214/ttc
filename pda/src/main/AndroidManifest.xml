@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.board.HeadBoardActivity">
+        <activity android:name=".activity.board.WarehouseBoardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,11 +37,10 @@
         <activity android:name=".activity.warehouse.MaterialDrainActivity" />
 
 
-
-    <!--    <activity android:name=".activity.board.HeadBoardActivity" />-->
+        <activity android:name=".activity.board.HeadBoardActivity" />
         <activity android:name=".activity.board.EndBoardActivity" />
         <activity android:name=".activity.board.OfficeBoardActivity" />
-        <activity android:name=".activity.board.WarehouseBoardActivity" />
+<!--        <activity android:name=".activity.board.WarehouseBoardActivity" />-->
 
     </application>
 

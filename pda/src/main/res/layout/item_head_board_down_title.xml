@@ -16,7 +16,7 @@
 		android:layout_gravity="center"
 		android:layout_marginTop="10dp"
 		style="@style/BoardTheme.MiddleTextView"
-		android:text="time"
+		android:text="时间"
 		/>
 
 	<TextView

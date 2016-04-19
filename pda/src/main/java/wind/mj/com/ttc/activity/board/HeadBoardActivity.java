@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +46,8 @@ public class HeadBoardActivity extends BaseActivity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN ,
+                WindowManager.LayoutParams. FLAG_FULLSCREEN);
         setContentView(R.layout.activity_head_board);
         ((TextView)findViewById(R.id.title)).setText(getString(R.string.head_board_title));
         mListView1 = (ListView) findViewById(R.id.id_listview1);
@@ -116,7 +119,7 @@ public class HeadBoardActivity extends BaseActivity implements Runnable {
                 map.put("database",Config.DATABASE);
                 map.put("login", Config.DEFAULT_USERNAME);
                 map.put("password", Config.DEFAULT_PASSWORD);
-                map.put("line","00");
+                map.put("line",Config.LINE_NUMBER);
                 return map;
             }
         };
@@ -162,7 +165,7 @@ public class HeadBoardActivity extends BaseActivity implements Runnable {
                 map.put("database",Config.DATABASE);
                 map.put("login", Config.DEFAULT_USERNAME);
                 map.put("password", Config.DEFAULT_PASSWORD);
-                map.put("line","00");
+                map.put("line",Config.LINE_NUMBER);
                 return map;
             }
         };

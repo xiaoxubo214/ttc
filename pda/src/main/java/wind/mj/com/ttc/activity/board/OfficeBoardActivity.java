@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +43,8 @@ public class OfficeBoardActivity extends BaseActivity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN ,
+                WindowManager.LayoutParams. FLAG_FULLSCREEN);
         setContentView(R.layout.activity_office_board);
         mListView = (ListView) findViewById(R.id.id_listview);
         ((TextView)findViewById(R.id.title)).setText(getString(R.string.office_board_title));
@@ -118,8 +121,8 @@ public class OfficeBoardActivity extends BaseActivity implements Runnable {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
                 map.put("database",Config.DATABASE);
-                map.put("login", "admin");
-                map.put("password", "1");
+                map.put("login", Config.DEFAULT_USERNAME);
+                map.put("password", Config.DEFAULT_PASSWORD);
                 return map;
             }
         };

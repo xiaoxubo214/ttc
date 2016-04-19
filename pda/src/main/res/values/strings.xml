@@ -61,8 +61,8 @@
     <string name="refresh">刷新</string>
     <string name="container_code">箱号</string>
     <string name="please_input_container_code">请输入箱号</string>
-    <string name="end_board_title">打包看板</string>
-    <string name="head_board_title">上线看板</string>
+    <string name="end_board_title">产线1打包看板</string>
+    <string name="head_board_title">产线1上线看板</string>
     <string name="warehouse_board_title">仓库看板</string>
     <string name="office_board_title">办公室看板</string>
     <string name="current_material">当前物料</string>

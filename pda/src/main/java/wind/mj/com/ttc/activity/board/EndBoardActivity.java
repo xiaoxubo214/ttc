@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,8 @@ public class EndBoardActivity extends BaseActivity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN ,
+                WindowManager.LayoutParams. FLAG_FULLSCREEN);
         setContentView(R.layout.activity_end_board);
         mActualNumberView = (TextView) findViewById(R.id.actual_number);
         mPlanNumberView = (TextView) findViewById(R.id.plan_number);
@@ -114,9 +117,9 @@ public class EndBoardActivity extends BaseActivity implements Runnable {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
                 map.put("database",Config.DATABASE);
-                map.put("login", "admin");
-                map.put("password", "1");
-                map.put("line","00");
+                map.put("login", Config.DEFAULT_USERNAME);
+                map.put("password", Config.DEFAULT_PASSWORD);
+                map.put("line",Config.LINE_NUMBER);
                 return map;
             }
         };
