@@ -89,12 +89,12 @@ public class MaterialDrainActivity extends BaseActivity {
 
     private void checkArrivalInfo(final String name, final String password, final String barcode, final String number) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_ARRIVAL_INBOUND,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_PRODUCT_MATERIAL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        //Log.e(TAG,response.toString());
-                        if (response.contains("YES")) {
+                        Log.e(TAG,response.toString());
+                        if (!response.contains("error")) {
                             Toast.makeText(MaterialDrainActivity.this,
                                     getString(R.string.get_success),Toast.LENGTH_LONG).show();
 
@@ -148,9 +148,10 @@ public class MaterialDrainActivity extends BaseActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<>();
+                map.put("database",Config.DATABASE);
                 map.put("login", name);
                 map.put("password", password);
-                map.put("barcode",barcode);
+                map.put("bar_code",barcode);
                 map.put("number",number);
                 return map;
             }

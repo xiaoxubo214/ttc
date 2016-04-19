@@ -13,6 +13,9 @@ import wind.mj.com.ttc.model.ArrivalDetail;
 import wind.mj.com.ttc.model.ArrivalInbound;
 import wind.mj.com.ttc.model.ArrivalInfo;
 import wind.mj.com.ttc.model.EndBoard;
+import wind.mj.com.ttc.model.Error;
+import wind.mj.com.ttc.model.HeadBoardDown;
+import wind.mj.com.ttc.model.HeadBoardUp;
 import wind.mj.com.ttc.model.HeadScan;
 import wind.mj.com.ttc.model.OfficeBoard;
 import wind.mj.com.ttc.model.ProductOnline;
@@ -107,6 +110,30 @@ public class DataUtil {
         List<WareHouseBoard> data = new Gson()
                 .fromJson(assetsFile != "" ? getJSONFromAsset(context, assetsFile):jsonString,
                         new TypeToken<List<WareHouseBoard>>() {
+                        }.getType());
+        return data;
+    }
+
+    public static List<HeadBoardUp> getHeadBoardUp(Context context, String assetsFile, String jsonString) {
+        List<HeadBoardUp> data = new Gson()
+                .fromJson(assetsFile != "" ? getJSONFromAsset(context, assetsFile):jsonString,
+                        new TypeToken<List<HeadBoardUp>>() {
+                        }.getType());
+        return data;
+    }
+
+    public static List<HeadBoardDown> getHeadBoardDown(Context context, String assetsFile, String jsonString) {
+        List<HeadBoardDown> data = new Gson()
+                .fromJson(assetsFile != "" ? getJSONFromAsset(context, assetsFile):jsonString,
+                        new TypeToken<List<HeadBoardDown>>() {
+                        }.getType());
+        return data;
+    }
+
+    public static Error getError(Context context, String assetsFile, String jsonString) {
+        Error data = new Gson()
+                .fromJson(assetsFile != "" ? getJSONFromAsset(context, assetsFile):jsonString,
+                        new TypeToken<Error>() {
                         }.getType());
         return data;
     }

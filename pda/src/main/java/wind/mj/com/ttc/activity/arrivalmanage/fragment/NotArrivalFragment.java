@@ -54,7 +54,7 @@ public class NotArrivalFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         //EventBus.getDefault().register(getActivity());
-        getArrivalInfo(SharedPrefsUtil.getString(mContext, Config.STR_USERNAME),
+        getNotArrivalInfo(SharedPrefsUtil.getString(mContext, Config.STR_USERNAME),
                SharedPrefsUtil.getString(mContext, Config.STR_PASSWORD),
                 SharedPrefsUtil.getString(mContext,Config.STR_CONTAINER_CODE,Config.STR_ZERO));
     }
@@ -67,23 +67,29 @@ public class NotArrivalFragment extends BaseFragment {
 
     public void onEventMainThread(MessageEvent event) {
         if  (event.getActionType() == MessageEvent.ACTION_REFRESH_ARRIVAL_INFO) {
-            getArrivalInfo(SharedPrefsUtil.getString(mContext, Config.STR_USERNAME),
+            getNotArrivalInfo(SharedPrefsUtil.getString(mContext, Config.STR_USERNAME),
                     SharedPrefsUtil.getString(mContext, Config.STR_PASSWORD),
                     SharedPrefsUtil.getString(mContext,Config.STR_CONTAINER_CODE,Config.STR_ZERO));
         }
     }
 
 
-    private void getArrivalInfo(final String name, final String password, final String code) {
+    private void getNotArrivalInfo(final String name, final String password, final String code) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_ARRIVAL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_NOT_ARRIVAL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        //Log.e(TAG,response.toString());
-                        if (response.contains("YES")) {
-                            Toast.makeText(mContext,
-                                    getString(R.string.get_success),Toast.LENGTH_LONG).show();
+                        Log.e(TAG,response.toString());
+                        if (!response.contains("error")) {
+                            List<ArrivalDetail> arrivalDetails = DataUtil.getArrivalDetail(mContext,"",response.toString());
+                            if (mArrivalDetailAdapter == null) {
+                                mArrivalDetailAdapter = new ArrivalDetailAdapter(mContext,arrivalDetails);
+                                mListView.setAdapter(mArrivalDetailAdapter);
+
+                            } else {
+                                mListView.setAdapter(mArrivalDetailAdapter);
+                            }
 
                         } else {
                             Toast.makeText(mContext,
@@ -119,7 +125,7 @@ public class NotArrivalFragment extends BaseFragment {
                 Map<String, String> map = new HashMap<>();
                 map.put("login", name);
                 map.put("password", password);
-                map.put("barcode",code);
+                map.put("code",code);
                 return map;
             }
         };

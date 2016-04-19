@@ -111,7 +111,7 @@ public class MainActivity extends BaseActivity {
         mDrawableList.add(ContextCompat.getDrawable(this,R.drawable.ic_launcher));
         mIntentList.add(new Intent(this,SaleActivity.class));
 
-        mNameList.add(getString(R.string.item_9));
+        /*mNameList.add(getString(R.string.item_9));
         mDrawableList.add(ContextCompat.getDrawable(this,R.drawable.ic_launcher));
         mIntentList.add(new Intent(this,ProductOnLineActivity.class));
 
@@ -121,7 +121,7 @@ public class MainActivity extends BaseActivity {
 
         mNameList.add(getString(R.string.item_11));
         mDrawableList.add(ContextCompat.getDrawable(this,R.drawable.ic_launcher));
-        mIntentList.add(new Intent(this,ProductFinishActivity.class));
+        mIntentList.add(new Intent(this,ProductFinishActivity.class));*/
 
     }
 }

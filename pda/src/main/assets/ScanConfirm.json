@@ -1,12 +1,12 @@
 {
-  "customer_model": "电机 FN20N-PG",
-  "code": "E1-00101",
-  "wlzd_code": "1501214603",
-  "bar_code": "624770E100101",
+  "customer_model": "电器盒部件",
+  "code": "A1-00001",
+  "date_arrive": "2016-04-18",
+  "wlzd_code": "10000204919",
+  "bar_code": "624990A100001",
   "specification": false,
-  "batch": "62477",
-  "actual_sum": 10,
-  "wlzd_name": "电机 FN20N-PG",
-  "model": "1501214603",
-  "date_arrive": 10
+  "batch": "62499",
+  "actual_sum": 100.0,
+  "wlzd_name": "电器盒部件",
+  "model": "10000204919"
 }

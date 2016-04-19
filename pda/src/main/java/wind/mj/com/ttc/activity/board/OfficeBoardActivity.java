@@ -6,6 +6,7 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -26,6 +27,7 @@ import wind.mj.com.ttc.Config;
 import wind.mj.com.ttc.R;
 import wind.mj.com.ttc.adapter.OfficeBoardAdapter;
 import wind.mj.com.ttc.event.MessageEvent;
+import wind.mj.com.ttc.model.Error;
 import wind.mj.com.ttc.model.OfficeBoard;
 import wind.mj.com.ttc.utils.DataUtil;
 
@@ -74,11 +76,11 @@ public class OfficeBoardActivity extends BaseActivity implements Runnable {
 
     private void getData(final String name,final String password) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_OFFICE,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_OFFICE_BOARD,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        if (response.contains("YES")) {
+                        if (!response.contains("error")) {
                             List<OfficeBoard> officeBoards = DataUtil.getOfficeBoard(mContext,"",response.toString());
                             if(officeBoards != null) {
                                 if (mOfficeBoardAdapter == null) {
@@ -89,6 +91,9 @@ public class OfficeBoardActivity extends BaseActivity implements Runnable {
                                 }
                             }
 
+                        } else {
+                            Error error = DataUtil.getError(mContext,"",response.toString());
+                            Toast.makeText(mContext,error.error,Toast.LENGTH_SHORT).show();
                         }
                     }
                 }, new Response.ErrorListener(){
@@ -112,9 +117,9 @@ public class OfficeBoardActivity extends BaseActivity implements Runnable {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
-                //map.put("login", name);
-                //map.put("password", password);
-                map.put("product_id","");
+                map.put("database",Config.DATABASE);
+                map.put("login", "admin");
+                map.put("password", "1");
                 return map;
             }
         };

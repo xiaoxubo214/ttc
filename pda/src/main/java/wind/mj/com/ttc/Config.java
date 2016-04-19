@@ -4,11 +4,11 @@ package wind.mj.com.ttc;
  * Created by wind on 16/2/16.
  */
 public class Config {
-    public final static boolean isDebug = true;
+    public final static boolean isDebug = false;
 
-    public final static boolean isTest = true;
+    public final static boolean isTest = false;
 
-    public final static String HOST = "http://192.168.65.77:8069/api/";
+    public final static String HOST = "http://192.168.1.110:8069/api/";
 
     public final static String DATABASE = "TTC";
 
@@ -32,7 +32,7 @@ public class Config {
     // url start
     public final static String URL_LOGIN = HOST + "Login/admin";                                           // 登录
 
-    public final static String URL_ARRIVAL_INBOUND = HOST + "warehouse/scll/" + DATABASE;
+    public final static String URL_PRODUCT_MATERIAL = HOST + "warehouse/scll/" + DATABASE;
 
     public final static String URL_SCAN_CONFIRM = HOST + "box/dhsm/" + DATABASE;//Scan confirm
 
@@ -56,12 +56,14 @@ public class Config {
 
     public final static String URL_PRODUCT_ONLINE = HOST + "" + DATABASE;
 
-    public final static String URL_HEAD_BOARD = HOST + "" + DATABASE;
+    public final static String URL_HEAD_BOARD_UP = HOST + "kanban/sxd_up/" + DATABASE;
 
-    public final static String URL_END_BOARD = HOST + "" + DATABASE;
+    public final static String URL_HEAD_BOARD_DOWN = HOST + "kanban/sxd_down/" + DATABASE;
 
-    public final static String URL_WAREHOUSE = HOST + "" + DATABASE;
+    public final static String URL_END_BOARD = HOST + "kanban/dbd/" + DATABASE;
 
-    public final static String URL_OFFICE = HOST + "" + DATABASE;
+    public final static String URL_WAREHOUSE_BOARD = HOST + "kanban/ckkb/" + DATABASE;
+
+    public final static String URL_OFFICE_BOARD = HOST + "kanban/bgskb/" + DATABASE;
 
 }

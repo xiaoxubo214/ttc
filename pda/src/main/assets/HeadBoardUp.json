@@ -1,0 +1,22 @@
+[
+  {
+    "customer": "三菱",
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)",
+    "plan_number": 300
+  },
+  {
+    "customer": "埃里克森",
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)",
+    "plan_number": 100
+  },
+  {
+    "customer": "客户",
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)",
+    "plan_number": 300
+  },
+  {
+    "customer": "现代",
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)",
+    "plan_number": 500
+  }
+]

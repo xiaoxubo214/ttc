@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -24,6 +25,7 @@ import wind.mj.com.ttc.Config;
 import wind.mj.com.ttc.R;
 import wind.mj.com.ttc.event.MessageEvent;
 import wind.mj.com.ttc.model.EndBoard;
+import wind.mj.com.ttc.model.Error;
 import wind.mj.com.ttc.utils.DataUtil;
 
 
@@ -82,13 +84,16 @@ public class EndBoardActivity extends BaseActivity implements Runnable {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        if (response.contains("YES")) {
+                        if (!response.contains("error")) {
                             EndBoard endBoard = DataUtil.getEndBoard(mContext,"",response.toString());
                             mActualNumberView.setText(endBoard.actual_number);
                             mPlanNumberView.setText(endBoard.plan_number);
                             mStateView.setText(endBoard.state);
                             mDifferenceView.setText(endBoard.difference);
 
+                        } else {
+                            Error error = DataUtil.getError(mContext,"",response.toString());
+                            Toast.makeText(mContext,error.error,Toast.LENGTH_SHORT).show();
                         }
                     }
                 }, new Response.ErrorListener(){
@@ -108,9 +113,10 @@ public class EndBoardActivity extends BaseActivity implements Runnable {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
-                //map.put("login", name);
-                //map.put("password", password);
-                map.put("product_id","");
+                map.put("database",Config.DATABASE);
+                map.put("login", "admin");
+                map.put("password", "1");
+                map.put("line","00");
                 return map;
             }
         };

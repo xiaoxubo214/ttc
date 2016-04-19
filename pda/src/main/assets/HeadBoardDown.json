@@ -1,0 +1,42 @@
+[
+  {
+    "time": "01:00-02:00",
+    "wl04": 0,
+    "wl01": 0,
+    "wl03": 0,
+    "wl02": 0,
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)",
+    "plan_number": 300,
+    "online_number": 300
+  },
+  {
+    "time": "03:00-04:00",
+    "wl04": 0,
+    "wl01": 3,
+    "wl03": 2,
+    "wl02": 3,
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)",
+    "plan_number": 100,
+    "online_number": 100
+  },
+  {
+    "time": "04:00-05:00",
+    "wl04": 0,
+    "wl01": 0,
+    "wl03": 0,
+    "wl02": 0,
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)",
+    "plan_number": 300,
+    "online_number": 10
+  },
+  {
+    "time": "08:00-09:00",
+    "wl04": 0,
+    "wl01": 7,
+    "wl03": 0,
+    "wl02": 1,
+    "model": "GWC09ZC-K3NNA1A/I 顶(伊莱克斯专用)",
+    "plan_number": 500,
+    "online_number": 7
+  }
+]

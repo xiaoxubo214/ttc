@@ -26,6 +26,7 @@ import java.util.Map;
 import wind.mj.com.ttc.BaseApp;
 import wind.mj.com.ttc.Config;
 import wind.mj.com.ttc.R;
+import wind.mj.com.ttc.model.Error;
 import wind.mj.com.ttc.model.ScanConfirm;
 import wind.mj.com.ttc.utils.DataUtil;
 
@@ -92,9 +93,12 @@ public class ScanConfirmActivity extends BaseActivity {
                     @Override
                     public void onResponse(String response) {
                         Log.e(TAG,"success" + response.toString());
-                        if (response.contains("YES")) {
+                        if (!response.contains("error")) {
+                            Log.e(TAG," " + (DataUtil.getScanConfirm(mContext,"",response.toString()) == null));
                             ScanConfirm scanConfirm = DataUtil.getScanConfirm(mContext, "", response.toString());
                             if (scanConfirm != null) {
+                                mScanInputView.setText("");
+
                                 mCustomerModelView.setText(scanConfirm.customer_model);
                                 mCodeView.setText(scanConfirm.code);
                                 mWlzdCodeView.setText(scanConfirm.wlzd_code);
@@ -107,7 +111,9 @@ public class ScanConfirmActivity extends BaseActivity {
                                 mDateArriveView.setText(scanConfirm.date_arrive);
                             }
                         } else {
-
+                            Log.e(TAG,"is null");
+                            Error error = DataUtil.getError(mContext,"",response.toString());
+                            Toast.makeText(mContext,error.error,Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -137,6 +143,7 @@ public class ScanConfirmActivity extends BaseActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
+                map.put("database",Config.DATABASE);
                 map.put("login", name);
                 map.put("password", password);
                 map.put("bar_code",barcode);

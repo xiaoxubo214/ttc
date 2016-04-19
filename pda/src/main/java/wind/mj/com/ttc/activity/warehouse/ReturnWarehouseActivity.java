@@ -25,6 +25,7 @@ import wind.mj.com.ttc.BaseApp;
 import wind.mj.com.ttc.Config;
 import wind.mj.com.ttc.R;
 import wind.mj.com.ttc.event.Event;
+import wind.mj.com.ttc.model.Error;
 import wind.mj.com.ttc.model.HeadScan;
 import wind.mj.com.ttc.utils.DataUtil;
 
@@ -97,7 +98,7 @@ public class ReturnWarehouseActivity extends BaseActivity {
                     @Override
                     public void onResponse(String response) {
                         //Log.e(TAG,response.toString());
-                        if (response.contains("YES")) {
+                        if (!response.contains("error")) {
                             Toast.makeText(mContext,
                                     getString(R.string.get_success),Toast.LENGTH_LONG).show();
 
@@ -115,8 +116,8 @@ public class ReturnWarehouseActivity extends BaseActivity {
                             }
 
                         } else {
-                            Toast.makeText(mContext,
-                                    getString(R.string.get_fail),Toast.LENGTH_LONG).show();
+                            Error error = DataUtil.getError(mContext,"",response.toString());
+                            Toast.makeText(mContext,error.error,Toast.LENGTH_SHORT).show();
 
                         }
                     }
