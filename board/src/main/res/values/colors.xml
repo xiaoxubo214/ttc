@@ -3,22 +3,40 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorBule">#b7e9ff</color>
+    <color name="green">#0a7906</color>
+    <color name="green_light">#15d30e</color>
+    <color name="yellow_light">#f8f806</color>
+    <color name="red_light">#ff2020</color>
 
-    <color name="green">#27D34D</color>
-    <color name="blue">#2A91BD</color>
-    <color name="orange">#FF9D2F</color>
-    <color name="red">#FF432F</color>
+    <color name="blue_bg">#1d8ec8</color>
+    <color name="check_bg">#145BC8</color>
+    <color name="black_bg">#1f2741</color>
+    <color name="blue_dark">#2b3654</color>
+    <color name="white_tv">#dedcdc</color>
+    <color name="btn_round">#283254</color>
+    <color name="black">#070707</color>
+    <color name="blue_holo">#143e7a</color>
+    <color name="white_light">#ffffff</color>
+    <color name="orange">#ff6112</color>
+    <color name="gray">#747171</color>
 
-    <color name="white">#FFFFFF</color>
-    <color name="deep_blue">#0d4876</color>
-    <color name="s_blue">#ff047608</color>
-    <color name="l_blue">#ff76055b</color>
-    <color name="e">#eeeeee</color>
-    <color name="f39800">#f39800</color>
-    <color name="seven_six">#767676</color>
+    <color name="chart_red">#c71705</color>
+    <color name="chart_brown">#af8146</color>
+    <color name="chart_kelly">#a4ce01</color>
+    <color name="chart_cyan">#00c817</color>
+    <color name="chart_green">#00b456</color>
+    <color name="chart_green_pale">#00ac95</color>
+    <color name="chart_blue_pale">#44d2fe</color>
+    <color name="chart_blue_light">#1d8ffc</color>
+    <color name="chart_blue">#0079db</color>
+    <color name="chart_purple">#6800ba</color>
 
-    <color name="huang">#FFFFFF00</color>
-    <color name="title_color">#2f3646</color>
-    <color name="biaodan">#FF649ABD</color>
-    <color name="dark_gray">#CDCDCD</color>
+    <color name="font">#444a59</color>
+
+    <color name="white">#ffffff</color>
+    <color name="order_font">#2258a7</color>
+    <color name="message">#518cc5</color>
+
+    <color name="vifrification">#00d7d5d5</color>
 </resources>

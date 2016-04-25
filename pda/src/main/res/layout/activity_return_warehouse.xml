@@ -61,7 +61,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="客户机型: "/>
+                android:text="@string/customer_model"/>
             <TextView
                 android:id="@+id/customer_model"
                 android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="箱号: "/>
+                android:text="@string/code_container"/>
             <TextView
                 android:id="@+id/code"
                 android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="物料编号: "/>
+                android:text="@string/wlzd_code"/>
             <TextView
                 android:id="@+id/wlzd_code"
                 android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="条码: "/>
+                android:text="@string/bar_code"/>
             <TextView
                 android:id="@+id/bar_code"
                 android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="物料名称（英文）: "/>
+                android:text="@string/wlzd_name_EN"/>
             <TextView
                 android:id="@+id/wlzd_name_EN"
                 android:layout_width="wrap_content"
@@ -131,7 +131,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="批次: "/>
+                android:text="@string/batch"/>
             <TextView
                 android:id="@+id/batch"
                 android:layout_width="wrap_content"
@@ -145,7 +145,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="数量: "/>
+                android:text="@string/actual_sum"/>
             <TextView
                 android:id="@+id/actual_sum"
                 android:layout_width="wrap_content"
@@ -159,7 +159,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="物料名称: "/>
+                android:text="@string/wlzd_name"/>
             <TextView
                 android:id="@+id/wlzd_name"
                 android:layout_width="wrap_content"
@@ -173,7 +173,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="用于机型: "/>
+                android:text="@string/model"/>
             <TextView
                 android:id="@+id/model"
                 android:layout_width="wrap_content"

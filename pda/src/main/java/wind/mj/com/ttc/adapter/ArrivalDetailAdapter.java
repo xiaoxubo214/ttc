@@ -67,13 +67,7 @@ public class ArrivalDetailAdapter extends BaseAdapter {
         {
             viewTag = (ItemViewTag) convertView.getTag();
         }
-        if (mList == null) {
-            Log.e("arrival:" , "mlist is null");
-        } else if (viewTag.customer_model == null) {
-            Log.e("arrival:" , "customer model is null");
-        } else if (mList.get(position).customer_model == null) {
-            Log.e("arrival:" , "mList customer model is null");
-        }
+
         viewTag.customer_model.setText(mList.get(position).customer_model);
         viewTag.code.setText(mList.get(position).code);
         viewTag.wlzd_code.setText(mList.get(position).wlzd_code);

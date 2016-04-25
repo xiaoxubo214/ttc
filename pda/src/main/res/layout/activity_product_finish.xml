@@ -30,7 +30,7 @@
         android:gravity="center"
         android:inputType="number"
         android:textSize="20sp"
-        android:hint="@string/scan_input"/>
+        android:hint="@string/line_number"/>
 
     <EditText
         android:id="@+id/input_product"
@@ -61,7 +61,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="客户机型: "/>
+                android:text="@string/customer_model"/>
             <TextView
                 android:id="@+id/model"
                 android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="物料编号: "/>
+                android:text="@string/wlzd_code"/>
             <TextView
                 android:id="@+id/code"
                 android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="物料名称: "/>
+                android:text="@string/wlzd_name"/>
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="已用数量: "/>
+                android:text="@string/used_number"/>
             <TextView
                 android:id="@+id/number"
                 android:layout_width="wrap_content"

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -20,6 +21,7 @@ import wind.mj.com.ttc.activity.arrivalmanage.fragment.NotArrivalFragment;
 import wind.mj.com.ttc.event.MessageEvent;
 
 public class ArrivalQueryActivity extends FragmentActivity {
+    private final static String TAG = ArrivalQueryActivity.class.getSimpleName();
     private FragmentTabHost mTabHost = null;
     private LinearLayout mRefreshLayout = null;
     private TextView mInputCodeView;
@@ -82,6 +84,12 @@ public class ArrivalQueryActivity extends FragmentActivity {
         super.onPause();
         //EventBus.getDefault().unregister(this);
     }
+
+    /*public void onEventMainThread(MessageEvent event) {
+        if (event.getActionType() == MessageEvent.ACTION_REFRESH_ARRIVAL_INFO) {
+            Log.e(TAG,"Action refresh arrival info");
+        }
+    }*/
 
     @Override
     protected void onDestroy() {

@@ -4,6 +4,8 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -54,7 +56,9 @@ public class ScanConfirmActivity extends BaseActivity {
         setContentView(R.layout.activity_scan_confirm);
 
         mScanInputView = (EditText) findViewById(R.id.scan_input);
+        //mScanInputView.addTextChangedListener(textWatcher);
         mSureView = (Button) findViewById(R.id.sure);
+        //mSureView.setVisibility(View.GONE);
         mSureView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +102,7 @@ public class ScanConfirmActivity extends BaseActivity {
                             ScanConfirm scanConfirm = DataUtil.getScanConfirm(mContext, "", response.toString());
                             if (scanConfirm != null) {
                                 mScanInputView.setText("");
+                                playSound();
 
                                 mCustomerModelView.setText(scanConfirm.customer_model);
                                 mCodeView.setText(scanConfirm.code);
@@ -155,10 +160,56 @@ public class ScanConfirmActivity extends BaseActivity {
 
     }
 
-    /*private void playSound() {
+    private TextWatcher textWatcher = new TextWatcher() {
+        int length = 0;
+        CharSequence value = "";
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            length = s.toString().length();
+            Log.e(TAG,"before length:  " + length);
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            Log.e(TAG,"char: " + s.toString());
+            if (Math.abs((s.toString().length() - length)) > 1) {
+                if ((!s.toString().isEmpty())) {
+                    checkArrivalInfo(SharedPrefsUtil.getString(mContext, Config.STR_USERNAME),
+                            SharedPrefsUtil.getString(mContext, Config.STR_PASSWORD),
+                            s.toString()
+                    );
+
+                    if ((!value.toString().isEmpty()) && (!s.toString().equals(value)) &&
+                            s.toString().contains(value)) {
+                        //Log.e(TAG,"is contain");
+                        Log.e(TAG,"value2: " + value);
+                        mScanInputView.setText(value.toString());
+                    } else {
+                        value = s.toString();
+                        Log.e(TAG,"value:  " + value);
+                    }
+                } else {
+                    Toast.makeText(mContext,getString(R.string.barcode_is_empty),Toast.LENGTH_SHORT).show();
+                }
+
+            } else {
+            }
+        }
+
+
+
+    };
+
+    private void playSound() {
         Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
         r.play();
-    }*/
+    }
 
 }

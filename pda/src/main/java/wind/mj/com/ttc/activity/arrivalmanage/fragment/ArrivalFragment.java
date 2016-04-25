@@ -65,8 +65,19 @@ public class ArrivalFragment extends BaseFragment {
         //EventBus.getDefault().unregister(getActivity());
     }
 
-    public void onEventMainThread(MessageEvent event) {
+    /*public void onEventMainThread(MessageEvent event) {
         if  (event.getActionType() == MessageEvent.ACTION_REFRESH_ARRIVAL_INFO) {
+            Log.e(TAG,"Action refresh arrival info");
+            getArrivalInfo(SharedPrefsUtil.getString(mContext, Config.STR_USERNAME),
+                    SharedPrefsUtil.getString(mContext, Config.STR_PASSWORD),
+                    SharedPrefsUtil.getString(mContext,Config.STR_CONTAINER_CODE,Config.STR_ZERO));
+        }
+    }*/
+
+    public void onEvent(MessageEvent event)
+    {
+        if  (event.getActionType() == MessageEvent.ACTION_REFRESH_ARRIVAL_INFO) {
+            Log.e(TAG,"Action refresh arrival info");
             getArrivalInfo(SharedPrefsUtil.getString(mContext, Config.STR_USERNAME),
                     SharedPrefsUtil.getString(mContext, Config.STR_PASSWORD),
                     SharedPrefsUtil.getString(mContext,Config.STR_CONTAINER_CODE,Config.STR_ZERO));
@@ -105,8 +116,8 @@ public class ArrivalFragment extends BaseFragment {
                 Log.e(TAG,volleyError.getMessage(),volleyError);
                 EventBus.getDefault().post(
                         new Event(Event.ACTION_ERROR,volleyError.getMessage()));
-                Toast.makeText(mContext,
-                        getString(R.string.get_fail),Toast.LENGTH_LONG).show();
+                //Toast.makeText(mContext,
+                //        getString(R.string.get_fail),Toast.LENGTH_LONG).show();
                 if (Config.isTest) {
                     List<ArrivalDetail> arrivalDetails = DataUtil.getArrivalDetail(mContext,"ArrivalDetail.json","");
                     if (mArrivalDetailAdapter == null) {

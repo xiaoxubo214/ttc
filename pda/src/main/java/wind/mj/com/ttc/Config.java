@@ -8,7 +8,7 @@ public class Config {
 
     public final static boolean isTest = false;
 
-    public final static String HOST = "http://192.168.1.110:8069/api/";
+    public final static String HOST = "http://192.168.1.104:8069/api/";
 
     public final static String DATABASE = "TTC";
 

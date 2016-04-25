@@ -105,8 +105,8 @@ public class NotArrivalFragment extends BaseFragment {
                 Log.e(TAG,volleyError.getMessage(),volleyError);
                 EventBus.getDefault().post(
                         new Event(Event.ACTION_ERROR,volleyError.getMessage()));
-                Toast.makeText(mContext,
-                        getString(R.string.get_fail),Toast.LENGTH_LONG).show();
+                //Toast.makeText(mContext,
+                //        getString(R.string.get_fail),Toast.LENGTH_LONG).show();
                 if (Config.isTest) {
                     List<ArrivalDetail> arrivalDetails = DataUtil.getArrivalDetail(mContext,"NotArrivalDetail.json","");
                     if (mArrivalDetailAdapter == null) {

@@ -15,7 +15,7 @@
     <string name="item_8">销售出库</string>
     <string name="item_9">生产上线</string>
     <string name="item_10">生产消耗</string>
-    <string name="item_11">生产完成</string>
+    <string name="item_11">生产打包</string>
     <string name="item_12">增加物</string>
     <string name="item_13">增加物料</string>
     <string name="item_14">增加物料4</string>
@@ -53,7 +53,6 @@
     <string name="get_fail">获取失败！</string>
     <string name="code">编号</string>
     <string name="name">名称</string>
-    <string name="batch">批次</string>
     <string name="status">状态</string>
     <string name="number">数量</string>
     <string name="default_number">默认为整箱</string>
@@ -67,5 +66,35 @@
     <string name="office_board_title">办公室看板</string>
     <string name="current_material">当前物料</string>
     <string name="current_product">产品</string>
-
+    <string name="line_number">线号</string>
+    <string name="actual_number">实际打包数量: </string>
+    <string name="plan_number">计划数量: </string>
+    <string name="state">速度: </string>
+    <string name="difference">差值: </string>
+    <string name="bad_number">不良品数: </string>
+    <string name="customer_model">客户机型: </string>
+    <string name="code_container">箱号: </string>
+    <string name="wlzd_code">物料编号:</string>
+    <string name="bar_code">条码: </string>
+    <string name="wlzd_name_EN">物料名称（英文）: </string>
+    <string name="batch">批次: </string>
+    <string name="actual_sum">数量: </string>
+    <string name="wlzd_name">物料名称: </string>
+    <string name="model">用于机型: </string>
+    <string name="used_number">已用数量: </string>
+    <string name="specification">规格型号: </string>
+    <string name="arrive_date">到货日期: </string>
+    <string name="time">时间</string>
+    <string name="model1">机型</string>
+    <string name="package_number">打包数量</string>
+    <string name="plan_number1">计划数量</string>
+    <string name="online_number">上线数量</string>
+    <string name="material1">压缩机</string>
+    <string name="material2">电磁阀</string>
+    <string name="material3">风扇</string>
+    <string name="material4">控制器</string>
+    <string name="customer">客户</string>
+    <string name="state1">速度</string>
+    <string name="time_part">时间段</string>
+    <string name="batch1">批次</string>
 </resources>

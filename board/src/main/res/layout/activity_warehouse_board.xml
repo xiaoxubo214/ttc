@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_board"></include>
+    <include layout="@layout/item_warehouse_board_title"/>
+
+        <ListView
+            android:id="@+id/id_listview1"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="0dp"/>
+        <ListView
+            android:id="@+id/id_listview2"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="0dp"/>
+
+        <ListView
+            android:id="@+id/id_listview3"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+        <ListView
+            android:id="@+id/id_listview4"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <ListView
+            android:id="@+id/id_listview1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <ListView
+            android:id="@+id/id_listview2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <ListView
+            android:id="@+id/id_listview3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <ListView
+            android:id="@+id/id_listview4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+    </LinearLayout>-->
+
+</LinearLayout>

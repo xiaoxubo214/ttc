@@ -6,11 +6,10 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
 /**
- * Created by wind on 16/3/4.
+ * Created by wind on 9/11/15.
  */
 public class BaseApp extends Application {
     private static RequestQueue requestQueue = null;
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -21,4 +20,3 @@ public class BaseApp extends Application {
         return requestQueue;
     }
 }
-

@@ -1,107 +1,64 @@
 package wind.mj.com.board.ui;
 
-import android.content.res.AssetManager;
-import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.WindowManager;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
+import com.mj.core.ui.BaseActivity;
+import com.mj.core.util.IntentUtils;
+import com.mj.core.util.SharedPrefsUtil;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import wind.mj.com.board.BaseApp;
 import wind.mj.com.board.Config;
 import wind.mj.com.board.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     public final static String TAG = MainActivity.class.getSimpleName();
-    private ListView mListView;
+    private int mWorkStation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
-                ,WindowManager.LayoutParams.FLAG_FULLSCREEN);//隐藏状态栏
-
-        mListView = (ListView) findViewById(R.id.list);
-        mListView.setAdapter(new ProductAdapter(this));
-
     }
 
-    private void getProductionLineInfo(final String name,final String password) {
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_CURRENT_PRODUCTION_LINE_INFO,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        if (response.contains("YES")) {
-
-                        } else  {
-
-                        }
-                    }
-                }, new Response.ErrorListener(){
-
-            @Override
-            public void onErrorResponse(VolleyError volleyError) {
-                Log.e(TAG,volleyError.getMessage(),volleyError);
-                if (Config.isDebug) {
-                }
-            }
-        }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> map = new HashMap<String, String>();
-                map.put("login", name);
-                map.put("password", password);
-                map.put("flag",Config.STR_ZERO);
-                return map;
-            }
-        };
-        stringRequest.setTag(TAG);
-        BaseApp.getRequestQueue().add(stringRequest);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        boolean isFirstOpen = !SharedPrefsUtil.contains(mContext, Config.KEY_IS_FIRST_RUN);
+        if (isFirstOpen) {
+            Bundle bundle = new Bundle();
+            bundle.putString("from", "main");
+            IntentUtils.forward(mContext, SettingActivity.class, bundle);
+        } else {
+            mWorkStation = SharedPrefsUtil.getInt(this,
+                    Config.KEY_WORKSTATION_NO);
+            startToWorkStation();
+        }
     }
 
-    private void getProductionLineListInfo(final String name,final String password) {
+    private void startToWorkStation() {
+        if ((mWorkStation == Config.LINE_ONE_START_BOARD)
+                || (mWorkStation == Config.LINE_TWO_START_BOARD)
+                || (mWorkStation == Config.LINE_THREE_START_BOARD)
+                || (mWorkStation == Config.LINE_FOUR_START_BOARD)) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_CURRENT_PRODUCTION_LINE_INFO,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        if (response.contains("YES")) {
+            IntentUtils.forward(mContext,HeadBoardActivity.class);
 
-                        } else  {
+        } else if ((mWorkStation == Config.LINE_ONE_END_BOARD)
+                || (mWorkStation == Config.LINE_TWO_END_BOARD)
+                || (mWorkStation == Config.LINE_THREE_END_BOARD)
+                || (mWorkStation == Config.LINE_FOUR_END_BOARD)) {
 
-                        }
-                    }
-                }, new Response.ErrorListener(){
+            IntentUtils.forward(mContext,EndBoardActivity.class);
 
-            @Override
-            public void onErrorResponse(VolleyError volleyError) {
-                Log.e(TAG,volleyError.getMessage(),volleyError);
-                if (Config.isDebug) {
-                }
-            }
-        }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> map = new HashMap<String, String>();
-                map.put("login", name);
-                map.put("password", password);
-                map.put("flag",Config.STR_ONE);
-                return map;
-            }
-        };
-        stringRequest.setTag(TAG);
-        BaseApp.getRequestQueue().add(stringRequest);
+        } else if (mWorkStation == Config.OFFICE_BOARD) {
+
+            IntentUtils.forward(mContext, OfficeBoardActivity.class);
+
+        } else if (mWorkStation == Config.WAREHOUSE_BOARD) {
+
+            IntentUtils.forward(mContext,WarehouseBoardActivity.class);
+
+        } else {
+            Log.e(TAG,"Error");
+        }
     }
 }
