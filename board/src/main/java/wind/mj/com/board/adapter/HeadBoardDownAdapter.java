@@ -76,6 +76,10 @@ public class HeadBoardDownAdapter extends BaseAdapter {
         viewTag.wl03.setText(mList.get(position).wl03);
         viewTag.wl04.setText(mList.get(position).wl04);
 
+        if (position%2 == 1) {
+            convertView.setBackground(mContext.getResources().getDrawable(R.drawable.white_gray));
+        }
+
         return convertView;
     }
 

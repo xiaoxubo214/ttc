@@ -84,6 +84,9 @@ public class WarehouseBoardAdapter extends BaseAdapter {
         viewTag.plan_number.setText(mList.get(position).plan_number);
         viewTag.line.setText(mList.get(position).line);
 
+        if (position%2 == 1) {
+            convertView.setBackground(mContext.getResources().getDrawable(R.drawable.white_gray));
+        }
 
         return convertView;
     }

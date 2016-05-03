@@ -111,4 +111,7 @@
     <string name="turn_back">返回</string>
     <string name="first_start_message">第一次启动</string>
     <string name="upper_set_tip">请输入完整，否则不能运行！</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -7,7 +7,7 @@
     <color name="green">#0a7906</color>
     <color name="green_light">#15d30e</color>
     <color name="yellow_light">#f8f806</color>
-    <color name="red_light">#ff2020</color>
+    <color name="red_light">#DB354C</color>
 
     <color name="blue_bg">#1d8ec8</color>
     <color name="check_bg">#145BC8</color>
@@ -39,4 +39,12 @@
     <color name="message">#518cc5</color>
 
     <color name="vifrification">#00d7d5d5</color>
+
+    <drawable name="white_gray">#dedcdc</drawable>
+
+
+    <color name="nav_list_bg">#29313B</color>
+    <color name="nav_list_press">#090E13</color>
+    <color name="nav_text_color">#889CB2</color>
+    <color name="blue">#3771EF</color>
 </resources>

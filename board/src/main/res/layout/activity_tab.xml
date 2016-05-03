@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/nav_list_bg"
+        android:stretchColumns="1"
+        android:visibility="visible">
+
+        <TableRow
+            android:background="@color/blue"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_30"
+                android:text="机器人生产产线"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/line_layout_1"
+            android:background="@color/nav_list_press">
+
+            <TextView
+                android:id="@+id/line_info_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingBottom="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_30"
+                android:text="产线信息"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+        </TableRow>
+
+        <TableRow android:id="@+id/line_layout_2">
+
+            <TextView
+                android:id="@+id/line_info_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingBottom="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_30"
+                android:text="AGV运行"
+                android:textColor="@color/nav_text_color"
+                android:textSize="30dp" />
+        </TableRow>
+
+        <TableRow android:id="@+id/line_layout_3">
+
+            <TextView
+                android:id="@+id/line_info_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingBottom="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_30"
+                android:text="库存状态"
+                android:textColor="@color/nav_text_color"
+                android:textSize="30dp" />
+        </TableRow>
+
+        <TableRow android:id="@+id/line_layout_4">
+
+            <TextView
+                android:id="@+id/line_info_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingBottom="@dimen/dp_30"
+                android:paddingTop="@dimen/dp_30"
+                android:text="设备监控"
+                android:textColor="@color/nav_text_color"
+                android:textSize="30dp" />
+        </TableRow>
+    </TableLayout>
+
+    <FrameLayout
+        android:id="@+id/details"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="20" />
+
+</LinearLayout>
+

@@ -12,7 +12,14 @@ public class Config {
 
     public final static String DATABASE = "TTC";
 
-    public final static String LINE_NUMBER = "00";
+    public final static String LINE_NUMBER_1 = "00";
+
+    public final static String LINE_NUMBER_2 = "01";
+
+    public final static String LINE_NUMBER_3 = "02";
+
+    public final static String LINE_NUMBER_4 = "03";
+
 
     public final static String STR_USERNAME = "username";
 
@@ -42,6 +49,10 @@ public class Config {
     public final static int OFFICE_BOARD = 9;
 
     public final static int WAREHOUSE_BOARD = 10;
+
+    public final static int STATION_MIN = LINE_ONE_START_BOARD;
+
+    public final static int STATION_MAX = WAREHOUSE_BOARD;
     // url start
 
     public final static String URL_HEAD_BOARD_UP = HOST + "kanban/sxd_up/" + DATABASE;

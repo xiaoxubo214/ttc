@@ -55,7 +55,7 @@ public class MainActivity extends BaseActivity {
 
         } else if (mWorkStation == Config.WAREHOUSE_BOARD) {
 
-            IntentUtils.forward(mContext,WarehouseBoardActivity.class);
+            IntentUtils.forward(mContext,TabActivity.class);
 
         } else {
             Log.e(TAG,"Error");

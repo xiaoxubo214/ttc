@@ -14,6 +14,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.mj.core.ui.BaseActivity;
+import com.mj.core.util.SharedPrefsUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -39,6 +40,7 @@ public class EndBoardActivity extends BaseActivity implements Runnable {
     private TextView mStateView;
     private TextView mDifferenceView;
     private TextView mBadNumberView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,12 +120,28 @@ public class EndBoardActivity extends BaseActivity implements Runnable {
                 map.put("database",Config.DATABASE);
                 map.put("login", Config.DEFAULT_USERNAME);
                 map.put("password", Config.DEFAULT_PASSWORD);
-                map.put("line",Config.LINE_NUMBER);
+                map.put("line",getLineNumber());
                 return map;
             }
         };
         stringRequest.setTag(TAG);
         BaseApp.getRequestQueue().add(stringRequest);
+    }
+
+
+    private String getLineNumber(){
+        int number = SharedPrefsUtil.getInt(mContext,Config.KEY_WORKSTATION_NO);
+        if (number == Config.LINE_ONE_START_BOARD || number == Config.LINE_ONE_END_BOARD) {
+            return Config.LINE_NUMBER_1;
+        } else if (number == Config.LINE_TWO_START_BOARD || number == Config.LINE_TWO_END_BOARD) {
+            return Config.LINE_NUMBER_2;
+        } else if (number == Config.LINE_THREE_START_BOARD || number == Config.LINE_THREE_END_BOARD) {
+            return Config.LINE_NUMBER_3;
+        } else if (number == Config.LINE_FOUR_START_BOARD || number == Config.LINE_FOUR_END_BOARD) {
+            return Config.LINE_NUMBER_4;
+        } else {
+            return null;
+        }
     }
 
     @Override

@@ -67,6 +67,10 @@ public class HeadBoardUpAdapter extends BaseAdapter {
         viewTag.model.setText(mList.get(position).model);
         viewTag.plan_number.setText(mList.get(position).plan_number);
 
+        if (position%2 == 1) {
+            convertView.setBackground(mContext.getResources().getDrawable(R.drawable.white_gray));
+        }
+
         return convertView;
     }
 

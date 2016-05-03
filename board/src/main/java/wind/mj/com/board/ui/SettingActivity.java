@@ -41,6 +41,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
 
         mEtServerIp = (EditText) findViewById(R.id.et_server_ip);
         mEtWorkstationNo = (EditText) findViewById(R.id.et_workstation_no);
+        mEtWorkstationNo.setHint("min is " + Config.STATION_MIN + "  max is  " + Config.STATION_MAX);
         mBtnSystemSetting = (Button) findViewById(R.id.btn_system_setting);
         mBtnSystemSetting.setOnClickListener(this);
         mBtnSave = (Button) findViewById(R.id.btn_save);

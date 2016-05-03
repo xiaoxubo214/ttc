@@ -74,6 +74,10 @@ public class OfficeBoardAdapter extends BaseAdapter {
         viewTag.plan_number.setText(mList.get(position).plan_number);
         viewTag.online_number.setText(mList.get(position).online_number);
 
+        if (position%2 == 1) {
+            convertView.setBackground(mContext.getResources().getDrawable(R.drawable.white_gray));
+        }
+
         return convertView;
     }
 
