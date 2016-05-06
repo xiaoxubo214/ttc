@@ -5,16 +5,15 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import wind.mj.com.board.R;
 
 public class OneFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "index";
 
-    // TODO: Rename and change types of parameters
+    private static final String ARG_PARAM1 = "index";
     private int mParam1;
+    private TextView mTitleView;
 
 
     public OneFragment() {
@@ -39,8 +38,10 @@ public class OneFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_one, container, false);
+        View view = inflater.inflate(R.layout.fragment_one, container, false);
+        mTitleView = (TextView) view.findViewById(R.id.title);
+        mTitleView.setText(R.string.product_name_1);
+        return view;
     }
 
     public int getShownIndex() {

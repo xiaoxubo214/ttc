@@ -4,9 +4,9 @@ package wind.mj.com.ttc;
  * Created by wind on 16/2/16.
  */
 public class Config {
-    public final static boolean isDebug = false;
+    public final static boolean isDebug = true;
 
-    public final static boolean isTest = false;
+    public final static boolean isTest = true;
 
     public final static String HOST = "http://192.168.1.104:8069/api/";
 

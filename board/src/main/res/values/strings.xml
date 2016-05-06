@@ -111,7 +111,10 @@
     <string name="turn_back">返回</string>
     <string name="first_start_message">第一次启动</string>
     <string name="upper_set_tip">请输入完整，否则不能运行！</string>
+    <string name="product_name">空调组装线</string>
+    <string name="product_name_1">空调组装线一</string>
+    <string name="product_name_2">空调组装线二</string>
+    <string name="product_name_3">空调组装线三</string>
+    <string name="product_name_4">空调组装线四</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

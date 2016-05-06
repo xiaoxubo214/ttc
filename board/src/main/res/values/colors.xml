@@ -38,10 +38,7 @@
     <color name="order_font">#2258a7</color>
     <color name="message">#518cc5</color>
 
-    <color name="vifrification">#00d7d5d5</color>
-
     <drawable name="white_gray">#dedcdc</drawable>
-
 
     <color name="nav_list_bg">#29313B</color>
     <color name="nav_list_press">#090E13</color>

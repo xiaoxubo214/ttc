@@ -13,7 +13,6 @@
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.HOME" />
@@ -24,7 +23,7 @@
         <activity android:name=".ui.HeadBoardActivity" />
         <activity android:name=".ui.WarehouseBoardActivity" />
         <activity android:name=".ui.SettingActivity" />
-        <activity android:name=".ui.TabActivity"></activity>
+        <activity android:name=".ui.WarehouseTabActivity"/>
     </application>
 
 </manifest>

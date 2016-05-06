@@ -23,7 +23,7 @@
                 android:gravity="center"
                 android:paddingBottom="@dimen/dp_30"
                 android:paddingTop="@dimen/dp_30"
-                android:text="机器人生产产线"
+                android:text="@string/product_name"
                 android:textColor="@color/white"
                 android:textSize="40dp" />
         </TableRow>
@@ -39,7 +39,7 @@
                 android:gravity="right"
                 android:paddingBottom="@dimen/dp_30"
                 android:paddingTop="@dimen/dp_30"
-                android:text="产线信息"
+                android:text="@string/product_name_1"
                 android:textColor="@android:color/white"
                 android:textSize="30dp" />
         </TableRow>
@@ -53,7 +53,7 @@
                 android:gravity="right"
                 android:paddingBottom="@dimen/dp_30"
                 android:paddingTop="@dimen/dp_30"
-                android:text="AGV运行"
+                android:text="@string/product_name_2"
                 android:textColor="@color/nav_text_color"
                 android:textSize="30dp" />
         </TableRow>
@@ -67,7 +67,7 @@
                 android:gravity="right"
                 android:paddingBottom="@dimen/dp_30"
                 android:paddingTop="@dimen/dp_30"
-                android:text="库存状态"
+                android:text="@string/product_name_3"
                 android:textColor="@color/nav_text_color"
                 android:textSize="30dp" />
         </TableRow>
@@ -81,7 +81,7 @@
                 android:gravity="right"
                 android:paddingBottom="@dimen/dp_30"
                 android:paddingTop="@dimen/dp_30"
-                android:text="设备监控"
+                android:text="@string/product_name_4"
                 android:textColor="@color/nav_text_color"
                 android:textSize="30dp" />
         </TableRow>

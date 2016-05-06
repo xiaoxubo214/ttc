@@ -148,7 +148,7 @@ public class EndBoardActivity extends BaseActivity implements Runnable {
     public void run() {
         try {
             while(true){
-                SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM月dd日  HH:mm");
+                SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd  HH:mm");
                 String str=sdf.format(new Date());
                 mHandler.sendMessage(mHandler.obtainMessage(100,str));
                 EventBus.getDefault().post(new MessageEvent(MessageEvent.ACTION_GET_END_BOARD_DATA));

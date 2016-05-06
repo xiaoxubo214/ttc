@@ -24,7 +24,7 @@ import wind.mj.com.board.ui.fragment.ThreeFragment;
 import wind.mj.com.board.ui.fragment.TwoFragment;
 import wind.mj.com.board.util.Utils;
 
-public class TabActivity extends BaseActivity implements View.OnClickListener {
+public class WarehouseTabActivity extends BaseActivity implements View.OnClickListener {
 
     public final static String TAG = "MainActivity";
 
@@ -54,12 +54,12 @@ public class TabActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab);
+        setContentView(R.layout.activity_warehouse_tab);
 
         initView();
         initViewList();
 
-        //默认显示产线信息
+        //默认显示
         if (mOneFragment == null || mOneFragment.getShownIndex() != 0) {
             mOneFragment = OneFragment.newInstance(0);
         }
@@ -224,7 +224,6 @@ public class TabActivity extends BaseActivity implements View.OnClickListener {
             }
         }
     }
-
 
     @Override
     protected void onResume(){
