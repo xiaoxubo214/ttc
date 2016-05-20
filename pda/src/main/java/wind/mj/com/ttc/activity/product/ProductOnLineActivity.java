@@ -80,7 +80,7 @@ public class ProductOnLineActivity extends BaseActivity {
 
     private void sendBarcode(final String name, final String password, final String line,final String product,final String material) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_PRODUCT_ONLINE,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, SharedPrefsUtil.getString(mContext,Config.KEY_SERVER_IP) + Config.URL_PRODUCT_ONLINE,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

@@ -42,4 +42,35 @@
         <item name="android:paddingBottom">8dp</item>
         <item name="android:textSize">15sp</item>
     </style>
+
+
+
+    <style name="Theme.MJ.Default" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/chart_blue_light</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.MJ.Default.Text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="Theme.MJ.Default.GrayText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ff666666</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+    <style name="Theme.MJ.Default.SettingTextView" parent="Theme.MJ.Default.Text">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+
+    <style name="Theme.MJ.Default.EditText">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>

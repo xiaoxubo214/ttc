@@ -76,7 +76,7 @@ public class NotArrivalFragment extends BaseFragment {
 
     private void getNotArrivalInfo(final String name, final String password, final String code) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_NOT_ARRIVAL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, SharedPrefsUtil.getString(mContext,Config.KEY_SERVER_IP) + Config.URL_NOT_ARRIVAL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

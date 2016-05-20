@@ -1,5 +1,8 @@
 package wind.mj.com.ttc.activity.product;
 
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -79,11 +82,12 @@ public class ProductDrainActivity extends BaseActivity {
 
     private void sendBarcode(final String name, final String password, final String line,final String product,final String material) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_PRODUCT_DRAIN,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, SharedPrefsUtil.getString(mContext,Config.KEY_SERVER_IP) + Config.URL_PRODUCT_DRAIN,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         //Log.e(TAG,response.toString());
+                        playSound();
                         if (response.contains("YES")) {
                             ProductOnline productOnline = DataUtil.getProductOnline(mContext,"",response.toString());
                             if (productOnline != null) {
@@ -133,5 +137,11 @@ public class ProductDrainActivity extends BaseActivity {
         };
         stringRequest.setTag(TAG);
         BaseApp.getRequestQueue().add(stringRequest);
+    }
+
+    private void playSound() {
+        Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+        r.play();
     }
 }

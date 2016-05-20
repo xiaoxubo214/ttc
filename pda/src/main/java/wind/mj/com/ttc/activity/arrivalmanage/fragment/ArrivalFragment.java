@@ -87,7 +87,7 @@ public class ArrivalFragment extends BaseFragment {
 
     private void getArrivalInfo(final String name, final String password, final String code) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_ARRIVAL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, SharedPrefsUtil.getString(mContext,Config.KEY_SERVER_IP) + Config.URL_ARRIVAL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

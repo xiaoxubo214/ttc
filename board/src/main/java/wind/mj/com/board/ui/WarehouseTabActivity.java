@@ -55,7 +55,6 @@ public class WarehouseTabActivity extends BaseActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_warehouse_tab);
-
         initView();
         initViewList();
 
@@ -63,7 +62,7 @@ public class WarehouseTabActivity extends BaseActivity implements View.OnClickLi
         if (mOneFragment == null || mOneFragment.getShownIndex() != 0) {
             mOneFragment = OneFragment.newInstance(0);
         }
-        Utils.replaceFragment(this, mTwoFragment, R.id.details, false);
+        //Utils.replaceFragment(this, mTwoFragment, R.id.details, false);
 
         //刷新任务列表
         mDataRefreshHandler.removeCallbacks(mDataRefreshRunnable);
@@ -144,7 +143,6 @@ public class WarehouseTabActivity extends BaseActivity implements View.OnClickLi
     }
 
     public void Circulating() {
-        Log.e(TAG,"recycle");
         if (mCurrentIndex > 3) {
             mCurrentIndex = 0;
         }
@@ -170,7 +168,7 @@ public class WarehouseTabActivity extends BaseActivity implements View.OnClickLi
         if (mOneFragment == null || mOneFragment.getShownIndex() != index) {
             mOneFragment = OneFragment.newInstance(index);
         }
-        Utils.replaceFragment(this, mOneFragment, R.id.details, false);
+        //Utils.replaceFragment(this, mOneFragment, R.id.details, false);
     }
 
     private void replaceTwoFragment(int index) {
@@ -178,7 +176,7 @@ public class WarehouseTabActivity extends BaseActivity implements View.OnClickLi
         if (mTwoFragment == null || mTwoFragment.getShownIndex() != index) {
             mTwoFragment = TwoFragment.newInstance(index);
         }
-        Utils.replaceFragment(this, mTwoFragment, R.id.details, false);
+        //Utils.replaceFragment(this, mTwoFragment, R.id.details, false);
     }
 
     private void replaceThreeFragment(int index) {
@@ -186,7 +184,7 @@ public class WarehouseTabActivity extends BaseActivity implements View.OnClickLi
         if (mThreeFragment == null || mThreeFragment.getShownIndex() != index) {
             mThreeFragment = ThreeFragment.newInstance(index);
         }
-        Utils.replaceFragment(this, mThreeFragment, R.id.details, false);
+        //Utils.replaceFragment(this, mThreeFragment, R.id.details, false);
     }
 
     private void replaceFourFragment(int index) {
@@ -194,7 +192,7 @@ public class WarehouseTabActivity extends BaseActivity implements View.OnClickLi
         if (mFourFragment == null || mFourFragment.getShownIndex() != index) {
             mFourFragment = FourFragment.newInstance(index);
         }
-        Utils.replaceFragment(this, mFourFragment, R.id.details, false);
+        //Utils.replaceFragment(this, mFourFragment, R.id.details, false);
     }
 
     //-----replace-end-------

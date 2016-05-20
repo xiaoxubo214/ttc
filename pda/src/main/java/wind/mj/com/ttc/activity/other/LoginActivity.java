@@ -110,11 +110,12 @@ public class LoginActivity extends BaseActivity {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
-            if (Config.isTest) {
+            //if (Config.isTest) {
                 userLogin(Config.DEFAULT_USERNAME, Config.DEFAULT_PASSWORD);
-            } else {
-                userLogin(username,password);
-            }
+            Log.e(TAG,SharedPrefsUtil.getString(mContext,Config.KEY_SERVER_IP) + Config.URL_LOGIN);
+            //} else {
+            //    userLogin(username,password);
+            //}
         }
     }
 
@@ -160,7 +161,8 @@ public class LoginActivity extends BaseActivity {
 
     private void userLogin(final String name,final String password) {
 
-        StringRequest stringRequest = new StringRequest(Method.POST, Config.URL_LOGIN,
+        StringRequest stringRequest = new StringRequest(Method.POST,
+                SharedPrefsUtil.getString(mContext,Config.KEY_SERVER_IP) + Config.URL_LOGIN,
                 new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -184,14 +186,15 @@ public class LoginActivity extends BaseActivity {
 
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                Log.e(TAG,volleyError.getMessage(),volleyError);
-                if (Config.isDebug) {
-                    showProgress(false);
+                //Log.e(TAG,volleyError.getMessage(),volleyError);
+                Log.e(TAG,"aaa");
+                showProgress(false);
+                //if (Config.isDebug) {
                     SharedPrefsUtil.setValue(LoginActivity.this, Config.STR_USERNAME, Config.DEFAULT_USERNAME);
                     SharedPrefsUtil.setValue(LoginActivity.this, Config.STR_PASSWORD, Config.DEFAULT_PASSWORD);
                     IntentUtils.forward(LoginActivity.this,MainActivity.class);
                     finish();
-                }
+               // }
             }
         }) {
             @Override

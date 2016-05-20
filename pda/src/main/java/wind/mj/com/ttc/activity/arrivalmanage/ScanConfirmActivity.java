@@ -92,7 +92,7 @@ public class ScanConfirmActivity extends BaseActivity {
     }
 
     private void checkArrivalInfo(final String name, final String password, final String barcode) {
-        StringRequest stringRequest = new StringRequest(Method.POST, Config.URL_SCAN_CONFIRM,
+        StringRequest stringRequest = new StringRequest(Method.POST, SharedPrefsUtil.getString(mContext,Config.KEY_SERVER_IP) + Config.URL_SCAN_CONFIRM,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

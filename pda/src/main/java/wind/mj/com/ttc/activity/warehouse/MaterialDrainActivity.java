@@ -89,11 +89,12 @@ public class MaterialDrainActivity extends BaseActivity {
 
     private void checkArrivalInfo(final String name, final String password, final String barcode, final String number) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_PRODUCT_MATERIAL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, SharedPrefsUtil.getString(mContext,Config.KEY_SERVER_IP) + Config.URL_PRODUCT_MATERIAL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Log.e(TAG,response.toString());
+                        playSound();
                         if (!response.contains("error")) {
                             Toast.makeText(MaterialDrainActivity.this,
                                     getString(R.string.get_success),Toast.LENGTH_LONG).show();

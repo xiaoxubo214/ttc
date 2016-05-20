@@ -53,7 +53,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         L.d(getClass().getName());
-        ButterKnife.reset(this);
+        //ButterKnife.reset(this);
         compositeSubscription.clear();
         super.onDestroy();
     }

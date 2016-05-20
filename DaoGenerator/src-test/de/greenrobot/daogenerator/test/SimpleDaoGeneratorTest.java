@@ -40,11 +40,11 @@ public class SimpleDaoGeneratorTest {
         assertEquals(1, schema.getEntities().size());
         assertEquals(3, addressEntity.getProperties().size());
 
-        File daoFile = new File("test-out/de/greenrobot/testdao/" + addressEntity.getClassName() + "Dao.java");
+        File daoFile = new File("../Ttc/DaoGenerator/src/de/greenrobot/testdao/" + addressEntity.getClassName() + "Dao.java");
         daoFile.delete();
         assertFalse(daoFile.exists());
 
-        new DaoGenerator().generateAll(schema, "test-out");
+        new DaoGenerator().generateAll(schema, "testdao");
 
         assertEquals("PRIMARY KEY", idProperty.getConstraints());
         assertTrue(daoFile.toString(), daoFile.exists());

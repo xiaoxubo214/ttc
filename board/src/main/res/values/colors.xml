@@ -44,4 +44,7 @@
     <color name="nav_list_press">#090E13</color>
     <color name="nav_text_color">#889CB2</color>
     <color name="blue">#3771EF</color>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="background_window">#FFE5E5E5</color>
 </resources>

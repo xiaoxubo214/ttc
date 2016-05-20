@@ -8,6 +8,8 @@ public class MessageEvent extends Event {
     public final static int ACTION_REFRESH_ARRIVAL_INFO = 1;
 
     public final static int ACTION_GET_END_BOARD_DATA = 2;
+
+    public final static int ACTION_CHANGE_FRAGMENT = 3;
     public MessageEvent(int actionType) {
         super(actionType);
     }

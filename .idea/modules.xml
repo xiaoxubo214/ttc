@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/Ttc.iml" filepath="$PROJECT_DIR$/Ttc.iml" />
       <module fileurl="file://$PROJECT_DIR$/board/board.iml" filepath="$PROJECT_DIR$/board/board.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/pda/pda.iml" filepath="$PROJECT_DIR$/pda/pda.iml" />
     </modules>
   </component>

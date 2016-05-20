@@ -15,7 +15,8 @@
 
         <TableRow
             android:background="@color/blue"
-            android:gravity="center">
+            android:gravity="center"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="match_parent"
@@ -91,7 +92,7 @@
         android:id="@+id/details"
         android:layout_width="0px"
         android:layout_height="match_parent"
-        android:layout_weight="20" />
+        android:layout_weight="25" />
 
 </LinearLayout>
 

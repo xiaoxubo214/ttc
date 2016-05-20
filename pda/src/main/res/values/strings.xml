@@ -97,4 +97,11 @@
     <string name="state1">速度</string>
     <string name="time_part">时间段</string>
     <string name="batch1">批次</string>
+    <string name="server_ip">服务器IP:</string>
+    <string name="hint_input_server_ip">请输入服务器IP地址</string>
+    <string name="system_setting">系统设置</string>
+    <string name="save">保存</string>
+    <string name="turn_back">返回</string>
+    <string name="first_start_message">第一次启动</string>
+    <string name="upper_set_tip">请输入完整，否则不能运行！</string>
 </resources>

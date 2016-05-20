@@ -72,8 +72,7 @@ public class WarehouseBoardActivity extends BaseActivity implements Runnable {
         super.onPause();
         EventBus.getDefault().unregister(this);
     }
-
-
+    
     public void onEventMainThread(MessageEvent event) {
         if  (event.getActionType() == MessageEvent.ACTION_GET_END_BOARD_DATA) {
             Log.e(TAG,"ACTION GET END BOARD DATA");
@@ -100,13 +99,13 @@ public class WarehouseBoardActivity extends BaseActivity implements Runnable {
                             list4.clear();
                             if (wareHouseBoardList != null && wareHouseBoardList.size() != 0){
                                 for (int i = 0;i< wareHouseBoardList.size();i++) {
-                                    if (wareHouseBoardList.get(i).line.equals("00")){
+                                    if (wareHouseBoardList.get(i).line.equals(Config.LINE_NUMBER_1)){
                                         list1.add(wareHouseBoardList.get(i));
-                                    } else if (wareHouseBoardList.get(i).line.equals("01")) {
+                                    } else if (wareHouseBoardList.get(i).line.equals(Config.LINE_NUMBER_2)) {
                                         list2.add(wareHouseBoardList.get(i));
-                                    } else if (wareHouseBoardList.get(i).line.equals("02")) {
+                                    } else if (wareHouseBoardList.get(i).line.equals(Config.LINE_NUMBER_3)) {
                                         list3.add(wareHouseBoardList.get(i));
-                                    } else if (wareHouseBoardList.get(i).line.equals("03")) {
+                                    } else if (wareHouseBoardList.get(i).line.equals(Config.LINE_NUMBER_4)) {
                                         list4.add(wareHouseBoardList.get(i));
                                     }
                                 }
